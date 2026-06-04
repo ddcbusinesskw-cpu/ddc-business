@@ -813,5 +813,15 @@ fetch('content/settings.json').then(function(r){return r.json();}).then(function
 }).catch(function(){});
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "cf9b112797f04ddab89186ab8db691f1"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function(user){
+    if (!user) {
+      window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; });
+    }
+  });
+}
+</script>
 </body>
 </html>
